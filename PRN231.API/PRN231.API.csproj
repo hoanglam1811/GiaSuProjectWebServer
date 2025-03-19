@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4" />
+    <PackageReference Include="Microsoft.OData.Core" Version="7.21.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PRN231.Constant\PRN231.Constant.csproj" />
+    <ProjectReference Include="..\PRN231.DAL\PRN231.DAL.csproj" />
+    <ProjectReference Include="..\PRN231.Models\PRN231.Models.csproj" />
+    <ProjectReference Include="..\PRN231.Repositories\PRN231.Repositories.csproj" />
+    <ProjectReference Include="..\PRN231.Services\PRN231.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UploadedFiles\" />
+    <Folder Include="UploadedFiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
